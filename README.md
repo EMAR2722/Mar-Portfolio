@@ -21,9 +21,9 @@ A modern, responsive personal portfolio website built for Marya Getu, a Computer
 - **JavaScript** – Tab switching, active link handling, read‑more toggles
 - **Font Awesome 6** – Icons for skills, social links, and UI elements
 - **Google Fonts** – Poppins font family
-
 ## 📁 Project Structure
-'''
+
+
 maryagetu-portfolio/
 ├── index.html # Main HTML file
 ├── style.css # All styles (included in the HTML as inline, but can be external)
@@ -34,7 +34,6 @@ maryagetu-portfolio/
 │ ├── beauty-salon.jpg
 │ └── internship.jpg
 └── README.md
-'''
 
 
 *(Note: The CSS is embedded in the HTML for simplicity; you can extract it to a separate file if desired.)*
