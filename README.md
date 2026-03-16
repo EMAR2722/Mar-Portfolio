@@ -49,5 +49,5 @@ A modern, responsive personal portfolio website built for Marya Getu, a Computer
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/maryagetu-portfolio.git
+   git clone https://github.com/github.com/EMAR2722/maryagetu-portfolio.git
    cd maryagetu-portfolio
