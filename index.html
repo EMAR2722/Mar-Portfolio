@@ -23,13 +23,13 @@
   <!-- Top Navigation -->
   <header class="top-nav">
     <div class="logo">
-      <h1>MaryaGetu<span class="accent">();</span></h1>
+      <h1>Marya Getu<span class="accent">;</span></h1>
     </div>
 
     <!-- Main Navigation Links -->
     <nav class="main-nav">
       <ul>
-        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#home" class="nav-link">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
         <li><a href="#blog" class="nav-link">Blog</a></li>
@@ -59,7 +59,7 @@
       <div class="hero-text">
         <p class="greeting">Hello World, I'm</p>
         <h2 class="name">Marya Getu</h2>
-        <p class="title"><span class="typing-text">FrontEnd Web Developer</span><span class="cursor">|</span></p>
+        <p class="title"><span class="typing-text">FrontEnd website  Developer</span><span class="cursor">|</span></p>
         <p class="welcome">Welcome to My personal website. <span class="wave">👋</span></p>
       </div>
     </section>
@@ -72,10 +72,13 @@
           <img src="images/about.jpg" alt="Developer illustration" class="about-img">
         </div>
         <div class="about-text">
-          <p>Hello, I’m Marya Getu, a 4th-year Computer Science and Engineering student at Adama Science and Technology
-            University.
-            I am passionate about front-end development and creating digital experiences that are both functional and
-            inspiring.</p>
+          <p>Hello, I’m Marya Getu, a 4th-year Computer Science and Engineering student at Adama Science and Technology University.
+             I am passionate about front-end development and creating digital experiences that are both functional and inspiring. </p>
+            <p>I enjoy turning ideas into interactive, user-friendly interfaces and continuously
+               learning new technologies to improve my skills and building clean, responsive interfaces that provide seamless user experiences.
+                I’m excited to share my projects and journey.
+              </p> 
+
         </div>
       </div>
     </section>
@@ -84,13 +87,16 @@
     <section id="skills" class="skills">
       <h2 class="section-title">Skills <span class="title-line"></span></h2>
 
+      <input type="radio" id="tab-tech" name="skill-tabs" class="tab-radio" checked>
+      <input type="radio" id="tab-tools" name="skill-tabs" class="tab-radio">
+
       <div class="skills-tabs">
-        <button class="tab-btn active" onclick="switchTab('tech')">Tech Stack</button>
-        <button class="tab-btn" onclick="switchTab('tools')">Tools</button>
+        <label for="tab-tech" class="tab-btn">Tech Stack</label>
+        <label for="tab-tools" class="tab-btn">Tools</label>
       </div>
 
       <!-- Tech Stack Tab Content -->
-      <div id="tech-stack" class="tab-content active">
+      <div id="tech-stack" class="tab-content">
         <div class="skills-grid">
           <div class="skill-card">
             <i class="fa-brands fa-html5" style="color: #e34f26;"></i>
@@ -203,14 +209,14 @@
             the global community.
             Our project featured a resource library for educational materials and an opportunities board for internships
             and scholarships.<span class="read-more-content">
-            I worked on the [front-end/back-end] team, using React, TypeScript, and Tailwind CSS (or Node.js, Express,
-            and MongoDB).
-            We followed agile practices with daily stand-ups, Trello, and Git for version control. By the end of the
-            internship,
-            we delivered a functional prototype that the Ministry plans to continue developing. This experience taught
-            me real-world collaboration,
-            agile workflows, and the importance of user-centered design. I'm proud to have contributed to technology
-            that empowers education and connects communities.</span></p>
+              I worked on the [front-end/back-end] team, using React, TypeScript, and Tailwind CSS (or Node.js, Express,
+              and MongoDB).
+              We followed agile practices with daily stand-ups, Trello, and Git for version control. By the end of the
+              internship,
+              we delivered a functional prototype that the Ministry plans to continue developing. This experience taught
+              me real-world collaboration,
+              agile workflows, and the importance of user-centered design. I'm proud to have contributed to technology
+              that empowers education and connects communities.</span></p>
 
           <label for="read-more-1" class="read-more-btn">
             <span class="text-more">Read More <i class="fa-solid fa-angle-down"></i></span>
@@ -229,11 +235,13 @@
             Gubae in Adama Science and Technology University.
             Our project focused on **digitalizing church services** to make them more accessible and efficient. We built
             a platform with features like user registration,
-            secure login, anonymous question submission, online donations, and attendance tracking.<span class="read-more-content"> This solution aimed
-            to modernize church operations while maintaining privacy and community connection.
-            Competing in this hackathon pushed me to think creatively, collaborate under tight deadlines, and present a
-            working prototype to judges. It was an unforgettable experience
-            that boosted my confidence and passion for building tech with real-world impact.</span></p>
+            secure login, anonymous question submission, online donations, and attendance tracking.<span
+              class="read-more-content"> This solution aimed
+              to modernize church operations while maintaining privacy and community connection.
+              Competing in this hackathon pushed me to think creatively, collaborate under tight deadlines, and present
+              a
+              working prototype to judges. It was an unforgettable experience
+              that boosted my confidence and passion for building tech with real-world impact.</span></p>
 
           <label for="read-more-2" class="read-more-btn">
             <span class="text-more">Read More <i class="fa-solid fa-angle-down"></i></span>
@@ -248,7 +256,7 @@
   <footer class="footer">
     <div class="contact-info">
       <h3>Let's Connect</h3>
-      <p><i class="fa-solid fa-envelope"></i> email@example.com</p>
+      <p><i class="fa-solid fa-envelope"></i> maryagetu04@gmail.com</p>
       <div class="footer-socials">
         <a href="https://www.linkedin.com/in/marya-getu-14003b319" target="_blank" aria-label="LinkedIn"><i
             class="fa-brands fa-linkedin"></i></a>
@@ -263,29 +271,6 @@
     </div>
   </footer>
 
-  <script>
-    // Simple active link switching for bottom nav based on click (can be enhanced with IntersectionObserver later)
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-      link.addEventListener('click', function () {
-        navLinks.forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
-      });
-    });
-
-    // Tab switching logic for Skills section
-    function switchTab(tabId) {
-      // Remove active class from all tabs and content
-      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-      document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-
-      // Add active class to clicked tab and corresponding content
-      event.target.classList.add('active');
-
-      const contentId = tabId === 'tech' ? 'tech-stack' : 'tools';
-      document.getElementById(contentId).classList.add('active');
-    }
-  </script>
 </body>
 
 </html>

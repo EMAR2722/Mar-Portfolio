@@ -242,7 +242,7 @@ section {
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
-  to { width: 145px; } /* Depending on exact font rendering width */
+  to { width: 100%; }
 }
 
 @keyframes blinkCursor {
@@ -324,6 +324,7 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
 }
 
 .about-text {
@@ -342,6 +343,10 @@ section {
   padding-top: 2rem;
 }
 
+.tab-radio {
+  display: none;
+}
+
 .skills-tabs {
   display: flex;
   gap: 1rem;
@@ -358,9 +363,12 @@ section {
   padding: 0.5rem 1rem;
   border-radius: 8px;
   transition: all var(--transition-speed) ease;
+  display: inline-block;
 }
 
-.tab-btn.active {
+/* CSS-only Tab Switching */
+#tab-tech:checked ~ .skills-tabs label[for="tab-tech"],
+#tab-tools:checked ~ .skills-tabs label[for="tab-tools"] {
   color: var(--accent-color);
   background-color: rgba(255, 215, 0, 0.1); /* Faint yellow bg */
 }
@@ -369,7 +377,8 @@ section {
   display: none;
 }
 
-.tab-content.active {
+#tab-tech:checked ~ #tech-stack,
+#tab-tools:checked ~ #tools {
   display: block;
   animation: fadeIn 0.5s ease;
 }
@@ -561,8 +570,35 @@ section {
   flex-grow: 1;
 }
 
+/* CSS-only Read More */
+.read-more-toggle {
+  display: none;
+}
+
+.read-more-content {
+  display: none;
+}
+
+.text-less {
+  display: none;
+}
+
+.read-more-toggle:checked ~ .blog-excerpt .read-more-content {
+  display: inline;
+  animation: fadeIn 0.5s ease;
+}
+
+.read-more-toggle:checked ~ .read-more-btn .text-more {
+  display: none;
+}
+
+.read-more-toggle:checked ~ .read-more-btn .text-less {
+  display: inline;
+}
+
 .read-more-btn {
   display: inline-flex;
+  cursor: pointer;
   align-items: center;
   gap: 0.4rem;
   font-size: 0.9rem;
